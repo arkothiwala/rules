@@ -1,7 +1,11 @@
 This repository contains important rules / PR checklist.
 
 # Type hinting
-- Adding `Any` from typings is equivalent to not adding any. You have to be explicit.
+- Adding `Any` from typings is equivalent to not adding any typehint. Typehints have to be explicit i.e. nullable or multiple with Union
+
+# FastAPI
+- Type hints - Always declare type hinting in FastAPI. Pydantic serializes response objects in Rust if you declare a return type of the path operation function.
+
 # PySpark
 - from pyspark.sql.functions import *
     - This is banned because it has min, max and other functions that conflict with native python functions and it leads to pipeline failures with sometimes error so unclear that you can't trace it back.
