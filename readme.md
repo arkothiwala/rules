@@ -5,6 +5,7 @@ This repository contains important rules / PR checklist.
 
 # FastAPI
 - Type hints - Always declare type hinting in FastAPI. Pydantic serializes response objects in Rust if you declare a return type of the path operation function.
+- If you aren't using outputs of the dependency function in the path operation function, then better declare it in the decorator instead of function arguments. This helps avoid tooling/editor error for unused variables or avoid confusion to the new developers.
 
 # PySpark
 - from pyspark.sql.functions import *
